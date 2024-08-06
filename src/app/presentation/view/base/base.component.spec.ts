@@ -1,21 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { BaseComponent } from './base.component';
-import { AppMaterialModule } from 'src/app/app-material.module';
-import { RouterModule, Router } from '@angular/router';
-import { IUsuarioController } from 'src/app/core/interfaces/controllers/iusuario-controller';
-import { RouterTestingModule } from '@angular/router/testing';
-import { UsuarioModel } from 'src/app/core/domain/entity/usuario-model';
-import { Observable, of } from 'rxjs';
-import { TranslateModule } from '@ngx-translate/core';
+import { BaseComponent } from "./base.component";
+import { AppMaterialModule } from "src/app/app-material.module";
+import { RouterModule, Router } from "@angular/router";
+import { IUsuarioController } from "src/app/core/interfaces/controllers/iusuario-controller";
+import { RouterTestingModule } from "@angular/router/testing";
+import { UsuarioModel } from "src/app/core/domain/entity/usuario-model";
+import { Observable, of } from "rxjs";
+import { TranslateModule } from "@ngx-translate/core";
 
 class MockUsuarioController {
   get(): UsuarioModel {
     return {
       id: 1,
-      username: 'test',
-      email: 'test@teste.com.br',
-      token: '123'
+      username: "test",
+      email: "test@teste.com.br",
+      token: "123",
     };
   }
 
@@ -24,7 +24,7 @@ class MockUsuarioController {
   }
 }
 
-describe('BaseComponent', () => {
+describe("BaseComponent", () => {
   let component: BaseComponent;
   let fixture: ComponentFixture<BaseComponent>;
   let usuarioController: MockUsuarioController;
@@ -34,14 +34,13 @@ describe('BaseComponent', () => {
       imports: [
         TranslateModule.forRoot(),
         AppMaterialModule,
-        RouterTestingModule
+        RouterTestingModule,
       ],
       providers: [
-        { provide: IUsuarioController, useClass: MockUsuarioController }
+        { provide: IUsuarioController, useClass: MockUsuarioController },
       ],
-      declarations: [ BaseComponent ]
-    })
-    .compileComponents();
+      declarations: [BaseComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -50,21 +49,21 @@ describe('BaseComponent', () => {
     fixture.detectChanges();
   });
 
-  it('deve criar', () => {
+  it("deve criar", () => {
     expect(component).toBeTruthy();
   });
 
-  it('deve obter as credenciais', () => {
+  it("deve obter as credenciais", () => {
     const mock = {
       id: 1,
-      username: 'test',
-      email: 'test@teste.com.br',
-      token: '123'
+      username: "test",
+      email: "test@teste.com.br",
+      token: "123",
     };
 
     usuarioController = new MockUsuarioController();
 
-    spyOn(usuarioController, 'get').and.returnValue(mock);
+    spyOn(usuarioController, "get").and.returnValue(mock);
 
     expect(usuarioController.get()).toBeTruthy();
 
@@ -76,7 +75,7 @@ describe('BaseComponent', () => {
     // const user = usuarioController.get();
   });
 
-  it('deve deslogar usuario', () => {
+  it("deve deslogar usuario", () => {
     component.logout();
   });
 });

@@ -1,1 +1,1 @@
-declare module 'automapper-ts';
+declare module "automapper-ts";

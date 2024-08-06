@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ValidationResult, ValidationError } from 'ts.validator.fluent/dist';
-import { MatSnackBar, MatSnackBarRef } from '@angular/material';
+import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import * as _ from 'lodash';
 
 import { NotificationComponent } from './notification.component';

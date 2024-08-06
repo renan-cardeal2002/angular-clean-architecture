@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
-import { AppMaterialModule } from 'src/app/app-material.module';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { AppMaterialModule } from "src/app/app-material.module";
+import { HomeRoutingModule } from "./home-routing.module";
+import { HomeComponent } from "./home.component";
+import { TranslateModule } from "@ngx-translate/core";
 
 @NgModule({
   declarations: [HomeComponent],
@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
     FlexLayoutModule,
     AppMaterialModule,
-    HomeRoutingModule
-  ]
+    HomeRoutingModule,
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

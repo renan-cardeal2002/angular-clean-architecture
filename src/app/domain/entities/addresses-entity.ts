@@ -1,4 +1,4 @@
-import { DomainEntity } from './base/domain-entity';
+import { DomainEntity } from "./base/domain-entity";
 export class AddressesEntity extends DomainEntity {
   name: string = null;
   state: string = null;

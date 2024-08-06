@@ -1,20 +1,16 @@
-module.exports = () => {
-  const data = {
-    usuarios: [],
-    motoristas: []
-  }
-
-  data.usuarios.push({
-    id: 1,
-    username: 'test',
-    password: '123',
-    email: 'contato@test.com.br',
-    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c3VhcmlvMSIsInNlbmhhIjoiMTIzIn0.Pu_q8I5wAFYKMoRHx89SALV2zRE9YvfmF6WYthpDLbU'
-  });
-
-  data.motoristas = [
+{
+  "usuarios": [
     {
-      "id": 1,
+      "id": "1",
+      "username": "test",
+      "password": "123",
+      "email": "contato@test.com.br",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c3VhcmlvMSIsInNlbmhhIjoiMTIzIn0.Pu_q8I5wAFYKMoRHx89SALV2zRE9YvfmF6WYthpDLbU"
+    }
+  ],
+  "motoristas": [
+    {
+      "id": "1",
       "name": "Pouca Tripa",
       "birth_date": "1976-09-22T00:00:00",
       "state": "São Paulo",
@@ -42,7 +38,7 @@ module.exports = () => {
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Quase nada",
       "birth_date": "1986-09-22T00:00:00",
       "state": "Rio de Janeiro",
@@ -66,8 +62,20 @@ module.exports = () => {
           "doc_type": "CPF"
         }
       ]
+    },
+    {
+      "id": "",
+      "name": "renan",
+      "birth_date": "2002-02-01",
+      "phone": "1231231321",
+      "documents": [
+        {
+          "number": "11472091973",
+          "category": "",
+          "doc_type": "CPF",
+          "add_document": false
+        }
+      ]
     }
-  ];
-
-  return data;
+  ]
 }

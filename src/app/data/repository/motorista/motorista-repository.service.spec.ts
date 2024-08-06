@@ -4,7 +4,6 @@ import { MotoristaRepositoryService } from './motorista-repository.service';
 import { HttpTestingController, HttpClientTestingModule, TestRequest } from '@angular/common/http/testing';
 import { environment } from '../../../../environments/environment';
 import { MotoristaModel } from 'src/app/core/domain/entity/motorista-model';
-import { UsuarioModel } from 'src/app/core/domain/entity/usuario-model';
 
 describe('MotoristaRepositoryService:', () => {
   let service: MotoristaRepositoryService;

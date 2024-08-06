@@ -1,20 +1,19 @@
-import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { Observable, throwError } from "rxjs";
 
-import { IMotoristaUsecase } from '../../interfaces/usecases/imotorista-usecase';
-import { IMotoristaRepository } from '../../interfaces/repository/imotorista-repository';
-import { IMotoristaValidator } from '../../interfaces/validations/imotorista-validator';
-import { DriverEntity } from '../../entities/driver-entity';
+import { IMotoristaUsecase } from "../../interfaces/usecases/imotorista-usecase";
+import { IMotoristaRepository } from "../../interfaces/repository/imotorista-repository";
+import { IMotoristaValidator } from "../../interfaces/validations/imotorista-validator";
+import { DriverEntity } from "../../entities/driver-entity";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class MotoristaUsecaseService implements IMotoristaUsecase {
-
   constructor(
     private motoristaRepository: IMotoristaRepository,
-    private motoristaValidator: IMotoristaValidator
-  ) { }
+    private motoristaValidator: IMotoristaValidator,
+  ) {}
 
   get(id?: number): Observable<DriverEntity> {
     if (id) {
@@ -44,5 +43,4 @@ export class MotoristaUsecaseService implements IMotoristaUsecase {
   disableEnable(id: number, status: boolean): Observable<DriverEntity> {
     return this.motoristaRepository.disableEnable(id, status);
   }
-
 }

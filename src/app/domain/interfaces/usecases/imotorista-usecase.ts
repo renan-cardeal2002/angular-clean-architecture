@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs';
-import { DriverEntity } from '../../entities/driver-entity';
+import { Observable } from "rxjs";
+import { DriverEntity } from "../../entities/driver-entity";
 
 export abstract class IMotoristaUsecase {
   abstract get(id?: number): Observable<DriverEntity>;

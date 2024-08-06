@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sw": "npm run build -s && npx http-server ./dist -p 4200",
-    "server": "json-server ./src/backend/server.js",
+    "server": "json-server ./src/backend/server.json",
     "translations:extract": "ngx-translate-extract --input ./src --output ./src/assets/i18n/template.json --format=json --clean -sort --marker extract",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
